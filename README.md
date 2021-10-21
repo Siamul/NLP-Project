@@ -9,8 +9,8 @@ Shrek, a green ogre who loves the solitude in his swamp, finds his life interrup
 
 is closest to:
 
-Then the grave, that dark friend of my limitless dreams.
------------------------------------------------
+### Then the grave, that dark friend of my limitless dreams.
+
 -----------------------------------------------
 Shrek tells them that he will go ask Farquaad to send them back.
 
