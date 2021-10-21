@@ -135,6 +135,7 @@ Shrek tells them that he will go ask Farquaad to send them back.
 v
 
 Where crystal streams by flowery margents flow
+
 And I must tell thee, ere I go,.
 -----------------------------------------------
 -----------------------------------------------
@@ -144,6 +145,7 @@ Meanwhile, Farquaad tortures the Gingerbread Man into giving the location of the
 v
 
 The big high church steeple
+
 for the house has fallen into the hands of wicked people..
 -----------------------------------------------
 -----------------------------------------------
@@ -153,6 +155,7 @@ To be a king he must marry a princess and is given three options, from which he 
 v
 
 We find one reference to his birthplace in the form of a bad pun
+
 The Princess of that castle was the one,.
 -----------------------------------------------
 -----------------------------------------------
@@ -171,6 +174,7 @@ Shrek and Donkey easily defeat the other knights in wrestling-match fashion, and
 v
 
 foreigner was probably brought to Rome as a child
+
 From the knight's grasp. The way is dark and wild;.
 -----------------------------------------------
 -----------------------------------------------
@@ -180,6 +184,7 @@ Donkey encounters the dragon and sweet-talks the beast before learning that it i
 v
 
 In the interior of the Wasp and Wagon
+
 He makes them bear before him his dragon,.
 -----------------------------------------------
 -----------------------------------------------
@@ -189,6 +194,7 @@ Shrek finds Fiona, who is appalled at his lack of romanticism.
 v
 
 So to the chamber of his guest the hero goes his way,.
+
 incongruous adaptation of an old Homeric simile we meet with a
 -----------------------------------------------
 -----------------------------------------------
@@ -198,6 +204,7 @@ At first, Fiona is thrilled to be rescued but is quickly disappointed when Shrek
 v
 
 The names of five or six comic dramatists are known who fill
+
 And at first you startled me.  But I knew you still,.
 -----------------------------------------------
 -----------------------------------------------
