@@ -1,7 +1,7 @@
 # NLP-Project
 
 
-Here's the pairwise sentences from a part of the Shrek plot and the Gutenberg Poetry corpus found by closest distance between the keywords of each sentence using GloVe (https://nlp.stanford.edu/projects/glove/) vectors trained with Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors).
+## Here's the pairwise sentences from a part of the Shrek plot and the Gutenberg Poetry corpus found by closest distance between the keywords of each sentence using GloVe (https://nlp.stanford.edu/projects/glove/) vectors trained with Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors).
 
 ##########################################################################
 -----------------------------------------------
@@ -126,7 +126,7 @@ is closest to:
 ##########################################################################
 
 
-I also take pairs of sentences from the plot and find the closest rhyming pair from the Gutenberg Poetry corpus. Here's the example output:
+## I also take pairs of sentences from the plot and find the closest rhyming pair from the Gutenberg Poetry corpus. Here's the example output:
 
 
 Shrek, a green ogre who loves the solitude in his swamp, finds his life interrupted when countless fairytale characters are exiled there by order of the fairytale-hating Lord Farquaad of Duloc.
