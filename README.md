@@ -359,3 +359,87 @@ are closest to:
 
 # Here's an example of the results using BERT vectors:
 
+-----------------------------------------------
+
+Shrek, a green ogre who loves the solitude in his swamp, finds his life interrupted when countless fairytale characters are exiled there by order of the fairytale-hating Lord Farquaad of Duloc.
+Shrek tells them that he will go ask Farquaad to send them back.
+
+are aligned to:
+
+### And smote my brother Otter that his heart's life fled away,.
+
+### incongruous adaptation of an old Homeric simile we meet with a
+
+-----------------------------------------------
+He brings along a talking Donkey, who is the only fairytale creature who knows the way to Duloc.
+Meanwhile, Farquaad tortures the Gingerbread Man into giving the location of the remaining fairytale creatures until his guards rush in with something he has been searching for: the Magic Mirror.
+
+are aligned to:
+
+### Then let the sacred tribunes wait my leisure
+
+### Can bring him to his sweet up-locked treasure,.
+
+-----------------------------------------------
+He asks The Mirror if his kingdom is the fairest of them all but is told that he is not even a king.
+To be a king he must marry a princess and is given three options, from which he chooses Princess Fiona, who is locked in a castle tower guarded by lava and a dragon.
+
+are aligned to
+### He smiled and threw an acorn at a lizard
+
+### The bride, thrice beautiful; the groom, a wizard;.
+
+-----------------------------------------------
+The Mirror tries to mention "the little thing that happens at night" but is unsuccessful.
+Shrek and Donkey arrive at Farquaad's palace in Duloc, where they end up in a tournament.
+
+are aligned to:
+
+### Her eye might flash on his, but found it dim;.
+
+### The grace of trees and the bloom of flowers were prized by him
+
+-----------------------------------------------
+The winner gets the "privilege" of rescuing Fiona so that Farquaad may marry her.
+Shrek and Donkey easily defeat the other knights in wrestling-match fashion, and Farquaad accepts his offer to move the fairytale creatures from his swamp if Shrek rescues Fiona.
+
+are aligned to:
+
+### But the girl whom he saved is our hero's fair bride,.
+
+### Illuc sis vide
+
+-----------------------------------------------
+Shrek and Donkey travel to the castle and split up to find Fiona.
+Donkey encounters the dragon and sweet-talks the beast before learning that it is female.
+
+are aligned to:
+
+### Ner kick, ner run away, cavort,.
+
+### Of a depending gaping servile court
+
+-----------------------------------------------
+Dragon takes a liking to him and carries him to her chambers.
+Shrek finds Fiona, who is appalled at his lack of romanticism.
+
+are aligned to:
+
+### So keen to fold me to his heart, that I.
+
+### Aere renidescit tellus supterque virum vi
+
+-----------------------------------------------
+As they leave, Shrek saves Donkey, caught in Dragon's tender clutches, and forces her to chase them out of the castle.
+At first, Fiona is thrilled to be rescued but is quickly disappointed when Shrek reveals he is an ogre.
+
+are aligned to:
+
+### To drive the dolphins from the wreathed door..
+
+### familiar to the Greek idyl of the recurring chime of the same or
+
+-----------------------------------------------
+
+
+
