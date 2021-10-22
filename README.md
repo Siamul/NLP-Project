@@ -1,7 +1,7 @@
 # NLP-Project
 
 
-## Here's an example of the sentence matching. We have the pairwise sentences from a part of the Shrek plot and the Gutenberg Poetry corpus found by closest distance between the keywords of each sentence using GloVe (https://nlp.stanford.edu/projects/glove/) vectors trained with Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors).
+## We have the pairwise sentences from a part of the Shrek plot and the Gutenberg Poetry corpus found by closest distance between the keywords of each sentence using GloVe (https://nlp.stanford.edu/projects/glove/) vectors trained with Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors) and sentence embeddings from BERT transformers (https://arxiv.org/abs/1908.10084). Here's an example of the sentence matching using GloVe.
 
 #########################################################################################################################
 -----------------------------------------------
