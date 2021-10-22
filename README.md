@@ -44,6 +44,8 @@ Then, start the training by running:
 
 You can download the trained weights here:
 
+The code has been modified to support multi-gpu training and Pytorch Dataloaders for faster data loading
+
 -------------------------------------------------
 
 # Unsupervised Neural Machine Translation from (https://github.com/artetxem/undreamt):
