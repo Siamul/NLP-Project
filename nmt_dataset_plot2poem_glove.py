@@ -14,7 +14,8 @@ import numpy as np
 from tqdm import tqdm
 import os
 
-glove_model_name = 'glove.840B.300d.txt'
+glove_model_name = sys.argv[1]
+no_of_pool = sys.argv[2]
 
 def cos_sim(u, v):
     dot = np.sum(u * v)
@@ -262,7 +263,7 @@ def process_plot_rhythm(idx):
     return filtered_sentences, poetry_sentences
 
 from multiprocessing import Pool
-pool = Pool(processes=8)
+pool = Pool(processes=no_of_pool)
 print('Processing non-rhythmic.')
 plot2poemdata = pool.map(process_plot_nonrhythm, range(len(titles)))
 pool.close()
@@ -277,7 +278,7 @@ with open(glove_model_name.split('.')[0] + '_' + glove_model_name.split('.')[1] 
                 poetryFile.write(poem_line + '\n')
 
 print('Processing rhythmic.')
-pool2 = Pool(processes=8)
+pool2 = Pool(processes=no_of_pool)
 plot2poemdatarhythmic = pool2.map(process_plot_rhythm, range(len(titles)))
 pool2.close()
 pool2.join()
