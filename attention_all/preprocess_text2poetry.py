@@ -142,7 +142,6 @@ def main():
     parser.add_argument('-max_len', type=int, default=510)
     parser.add_argument('-min_word_count', type=int, default=3)
     parser.add_argument('-keep_case', action='store_true')
-    parser.add_argument('-share_vocab', action='store_true')
     #parser.add_argument('-ratio', '--train_valid_test_ratio', type=int, nargs=3, metavar=(8,1,1))
     #parser.add_argument('-vocab', default=None)
 
