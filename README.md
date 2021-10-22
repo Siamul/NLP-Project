@@ -263,7 +263,7 @@ is closest to:
 -----------------------------------------------
 -----------------------------------------------
 
-## I also take pairs of sentences from the plot and find the closest rhyming pair from the Gutenberg Poetry corpus using GloVe and BERT vectors. 
+## I also take pairs of sentences from the plot and approximate the closest rhyming pair (I take the closest poetry sentence for each sentence and then, take a rhyming sentence that is closest for the other sentence. I take the least distant pair among these two pairs) from the Gutenberg Poetry corpus using GloVe and BERT vectors. 
 
 # Here's the example output for rhyming pairs aligned using GloVe:
 
