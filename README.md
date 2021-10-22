@@ -190,7 +190,7 @@ is closest to:
 
 #########################################################################################################################
 
-# Here's an example of sentence matching using BERT vectors. 
+# Here's an example of sentence matching using BERT vectors (stsb-roberta). 
 
 #########################################################################################################################
 
