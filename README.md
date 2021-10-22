@@ -26,7 +26,8 @@ To create the aligned dataset using BERT sentence embeddings, run:
 
 Both codes uses multiprocessing for speedup and you have mention the number of processes as the third argument.
 
-You can download all the datasets, the compiled embeddings files, and the annoy object here:
+You can download all the datasets, the compiled embeddings files, and the annoy object here: 
+https://drive.google.com/drive/folders/1FYxKooQ0dbOMZcJjkP2tfLfyhuo0bWuU?usp=sharing
 
 Examples of these matching are provided at the end.
 
@@ -43,6 +44,7 @@ Then, start the training by running:
 > python train.py -data_pkl <data_file_name> -embs_share_weight -proj_share_weight -label_smoothing -output_dir output -b <batch_size> -warmup 128000 -epoch 400 -save_mode <best/all>
 
 You can download the trained weights here:
+https://drive.google.com/drive/folders/16eIUa26n-Zmz1lWgZywY5pYmgeadodwY?usp=sharing
 
 The code has been modified to support multi-gpu training and Pytorch Dataloaders for faster data loading
 
@@ -55,6 +57,7 @@ To start the training run:
 > python train.py --src nonpoetry.txt --trg poetry.txt --src_embeddings ./glove.42B.300d.w2v.txt --trg_embeddings ./glove.42B.300d.w2v.txt --save prosaic2poetry --cuda --batch 16
 
 The train for this is quite slow. You can download the trained weights here:
+https://drive.google.com/drive/folders/1iSBNM2mV6QviJD1myLQ18dRGDPQH3j7-?usp=sharing
 
 To translate a sentence using the trained weights, write the sentences separated by '\n' in input.txt and run:
 
