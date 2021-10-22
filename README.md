@@ -6,7 +6,7 @@
 -----------------------------------------------
 # Here's an example of the sentence matching using GloVe.
 
-#########################################################################################################################
+-----------------------------------------------
 -----------------------------------------------
 Shrek, a green ogre who loves the solitude in his swamp, finds his life interrupted when countless fairytale characters are exiled there by order of the fairytale-hating Lord Farquaad of Duloc.
 
@@ -260,7 +260,8 @@ is closest to:
 
 ### Steal home and cry herself to sleep..
 
-#####################################################################################################################################
+-----------------------------------------------
+-----------------------------------------------
 
 ## I also take pairs of sentences from the plot and find the closest rhyming pair from the Gutenberg Poetry corpus using GloVe and BERT vectors. 
 
@@ -354,5 +355,7 @@ are closest to:
 ### "We will away to the cave of Night,.
 
 -----------------------------------------------
+-----------------------------------------------
+
 # Here's an example of the results using BERT vectors:
 
