@@ -56,7 +56,7 @@ To start the training run:
 
 > python train.py --src nonpoetry.txt --trg poetry.txt --src_embeddings ./glove.42B.300d.w2v.txt --trg_embeddings ./glove.42B.300d.w2v.txt --save prosaic2poetry --cuda --batch 16
 
-The train for this is quite slow. You can download the trained weights here:
+The training for this is quite slow. You can download the trained weights here:
 https://drive.google.com/drive/folders/1iSBNM2mV6QviJD1myLQ18dRGDPQH3j7-?usp=sharing
 
 To translate a sentence using the trained weights, write the sentences separated by '\n' in input.txt and run:
