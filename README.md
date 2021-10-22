@@ -1,7 +1,69 @@
 # NLP-Project
 
+------------------------------------------------
 
-## We have the pairwise sentences from a part of the Shrek plot and the Gutenberg Poetry corpus found by closest distance between the keywords of each sentence using GloVe (https://nlp.stanford.edu/projects/glove/) vectors trained with Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors) and sentence embeddings from BERT transformers (https://arxiv.org/abs/1908.10084). 
+# Dataset Creation through Alignment
+
+To convert the plot of Shrek from Wikiplots into Poetry using closest distances for mean vector of keywords from Gutenberg Poetry corpus, run:
+
+> python plot2poem_glove.py <glove_file_name>
+
+You can use the pre-trained glove vectors as model: https://nlp.stanford.edu/projects/glove/
+
+To convert the plot of Shrek from Wikiplots into Poetry using closest bert sentence embedding distances from Gutenberg Poetry corpus, run:
+
+> python plot2poem_BERT.py <model_name>
+
+You can find an overview of the models available here: https://www.sbert.net/docs/pretrained_models.html
+
+To create the aligned dataset using GloVe vectors, run:
+
+> python nmt_dataset_plot2poem_glove.py <glove_file_name> <no_of_processes>
+
+To create the aligned dataset using BERT sentence embeddings, run:
+
+> python nmt_dataset_plot2poem_bert.py <model_name> <no_of_processes>
+
+Both codes uses multiprocessing for speedup and you have mention the number of processes as the third argument.
+
+You can download all the datasets, the compiled embeddings files, and the annoy object here:
+
+Examples of these matching are provided at the end.
+
+-------------------------------------------------
+
+# Attention-based Seq2seq model from (https://github.com/jadore801120/attention-is-all-you-need-pytorch) 
+
+First you need to create a torchtext dataset from the files generated above. The code for this creation is given in preprocess_text2poetry.py. To use this code, you basically need two text files where the lines are aligned so that the line 'n' in file 1 translates to line 'n' in file 2. So, first preprocess the dataset by running:
+
+> python preprocess_text2poetry.py -data_src <aligned_src_file_name> -data_trg <aligned_target_file_name> -save_data <data_file_name>
+
+Then, start the training by running:
+
+> python train.py -data_pkl <data_file_name> -embs_share_weight -proj_share_weight -label_smoothing -output_dir output -b <batch_size> -warmup 128000 -epoch 400 -save_mode <best/all>
+
+You can download the trained weights here:
+
+-------------------------------------------------
+
+# Unsupervised Neural Machine Translation from (https://github.com/artetxem/undreamt):
+
+To start the training run:
+
+> python train.py --src nonpoetry.txt --trg poetry.txt --src_embeddings ./glove.42B.300d.w2v.txt --trg_embeddings ./glove.42B.300d.w2v.txt --save prosaic2poetry --cuda --batch 16
+
+The train for this is quite slow. You can download the trained weights here:
+
+To translate a sentence using the trained weights, write the sentences separated by '\n' in input.txt and run:
+
+> python translate.py prosaic2poetry.final.src2trg.pth -i input.txt -o output.txt
+
+You will find the converted outputs in output.txt
+
+-----------------------------------------------
+
+
+### We have the pairwise sentences from a part of the Shrek plot and the Gutenberg Poetry corpus found by closest distance between the keywords of each sentence using GloVe (https://nlp.stanford.edu/projects/glove/) vectors trained with Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors) and sentence embeddings from BERT transformers (https://arxiv.org/abs/1908.10084). 
 
 -----------------------------------------------
 # Here's an example of the sentence matching using GloVe.
