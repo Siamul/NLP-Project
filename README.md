@@ -125,8 +125,131 @@ is closest to:
 
 #########################################################################################################################
 
+## Here's an example of sentence matching using BERT vectors. 
 
-## I also take pairs of sentences from the plot and find the closest rhyming pair from the Gutenberg Poetry corpus. Here's the example output:
+#########################################################################################################################
+
+### Shrek, a green ogre who loves the solitude in his swamp, finds his life interrupted when countless fairytale characters are exiled there by order of the fairytale-hating Lord Farquaad of Duloc.
+
+is closest to:
+
+### And smote my brother Otter that his heart's life fled away,.
+
+
+### Shrek tells them that he will go ask Farquaad to send them back.
+
+is closest to:
+
+### "He calls his wish, it comes; he sends it back,.
+
+
+### He brings along a talking Donkey, who is the only fairytale creature who knows the way to Duloc.
+
+is closest to:
+
+### And the donkey is he who can't see the ..
+
+
+### Meanwhile, Farquaad tortures the Gingerbread Man into giving the location of the remaining fairytale creatures until his guards rush in with something he has been searching for: the Magic Mirror.
+
+is closest to:
+
+### Can bring him to his sweet up-locked treasure,.
+
+
+### He asks The Mirror if his kingdom is the fairest of them all but is told that he is not even a king.
+
+is closest to:
+
+### Each claim'd; not all their mighty kingdom's power,.
+
+
+### To be a king he must marry a princess and is given three options, from which he chooses Princess Fiona, who is locked in a castle tower guarded by lava and a dragon.
+
+is closest to:
+
+### The bride, thrice beautiful; the groom, a wizard;.
+
+
+### The Mirror tries to mention "the little thing that happens at night" but is unsuccessful.
+
+is closest to:
+
+### Her eye might flash on his, but found it dim;.
+
+
+### Shrek and Donkey arrive at Farquaad's palace in Duloc, where they end up in a tournament.
+
+is closest to:
+
+### Schrutan and stout Gibek into the tourney rode,.
+
+
+### The winner gets the "privilege" of rescuing Fiona so that Farquaad may marry her.
+
+is closest to:
+
+### But the girl whom he saved is our hero's fair bride,.
+
+
+### Shrek and Donkey easily defeat the other knights in wrestling-match fashion, and Farquaad accepts his offer to move the fairytale creatures from his swamp if Shrek rescues Fiona.
+
+is closest to:
+
+### like by Imbrius. As two lions snatch a goat from the hounds that.
+
+
+### Shrek and Donkey travel to the castle and split up to find Fiona.
+
+is closest to:
+
+### Ner kick, ner run away, cavort,.
+
+
+### Donkey encounters the dragon and sweet-talks the beast before learning that it is female.
+
+is closest to:
+
+### Only the monkey chatters, & discordant the parrot screams:.
+
+
+### Dragon takes a liking to him and carries him to her chambers.
+
+is closest to:
+
+### So keen to fold me to his heart, that I.
+
+
+### Shrek finds Fiona, who is appalled at his lack of romanticism.
+
+is closest to:
+
+### Oft finding them slatterns void of love;.
+
+
+### As they leave, Shrek saves Donkey, caught in Dragon's tender clutches, and forces her to chase them out of the castle.
+
+is closest to:
+
+### To drive the dolphins from the wreathed door..
+
+
+### At first, Fiona is thrilled to be rescued but is quickly disappointed when Shrek reveals he is an ogre.
+
+is closest to:
+
+### How the young gleaner was much frightened, and how happy he was.
+
+
+### As the three journey to Duloc, Fiona urges the two to camp out for the night while she sleeps in a cave.
+
+is closest to:
+
+### Steal home and cry herself to sleep..
+
+#####################################################################################################################################
+
+## I also take pairs of sentences from the plot and find the closest rhyming pair from the Gutenberg Poetry corpus using GloVe and BERT vectors. Here's the example output for GloVe:
 
 
 Shrek, a green ogre who loves the solitude in his swamp, finds his life interrupted when countless fairytale characters are exiled there by order of the fairytale-hating Lord Farquaad of Duloc.
@@ -212,3 +335,6 @@ As the three journey to Duloc, Fiona urges the two to camp out for the night whi
 are closest to:
 
 ### "We will away to the cave of Night,.
+
+Here's an example of the results using BERT vectors:
+
