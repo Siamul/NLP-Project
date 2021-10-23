@@ -37,7 +37,7 @@ for matched lines using glove and
 
 > python text2poem_BERT.py <model_name>
 
-for matched liens using BERT.
+for matched lines using BERT.
 
 Examples of these matching are provided at the end.
 
