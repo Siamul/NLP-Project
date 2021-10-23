@@ -86,8 +86,8 @@ else:
     with open(model_name + '_plot_bert_embeddings.pkl', 'rb') as plobefile:
         plots_embeddings = pickle.load(plobefile)
     
-if not os.path.exists('poetry_annoy_bert.ann'):
-    t = AnnoyIndex(1024, metric='angular')   #fast nearest neight lookup for poem lines
+if not os.path.exists(model_name + '_poetry_annoy_bert.ann'):
+    t = AnnoyIndex(poetry_embeddings[0].shape[0], metric='angular')   #fast nearest neight lookup for poem lines
     print('Building annoy for fast nearest neighbor search...')
     for i in tqdm(range(len(poetry_embeddings))):
         t.add_item(i, poetry_embeddings[i])
@@ -96,7 +96,7 @@ if not os.path.exists('poetry_annoy_bert.ann'):
     print('Saved Poetry annoy model based on ', model_name)
 else:
     print('Loading previously made annoy model for ', model_name)
-    t = AnnoyIndex(1024, metric='angular')
+    t = AnnoyIndex(poetry_embeddings[0].shape[0], metric='angular')
     t.load(model_name + '_poetry_annoy_bert.ann')
     
 assert(t.get_n_items() == len(all_lines))

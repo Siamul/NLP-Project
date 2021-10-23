@@ -16,8 +16,11 @@ import os
 from sentence_transformers import SentenceTransformer
 import _pickle as pickle
 
-model_name = sys.argv[1]
-model = SentenceTransformer(model_name, device='cuda' if torch.cuda.is_available() else 'cpu')
+
+model_name = sys.argv[1] # all-mpnet-base-v2
+
+#model = SentenceTransformer('stsb-roberta-large', device='cuda')
+model = SentenceTransformer(model_name, device='cuda')
 
 def cos_sim(u, v):
     dot = np.sum(u * v)
@@ -43,8 +46,6 @@ plots = plotutils.loadplots()
 
 #print(line_vector('this is a test').shape)
 #print(line_vector('this is a much larger test because it is needed, really really needed').shape)
-
-    
 all_lines = []
 print("Loading poetry... ")
 with open('poetry.txt', 'r', encoding='utf-8') as poetry_file:
@@ -52,17 +53,17 @@ with open('poetry.txt', 'r', encoding='utf-8') as poetry_file:
         all_lines.append(line.strip())
         
 if not os.path.exists(model_name + '_poetry_bert_embeddings.pkl'):              
-    print("Finding BERT embeddings for poetry")
+    print("Finding ", model_name, " embeddings for poetry")
     poetry_embeddings = model.encode(all_lines, convert_to_numpy=True, show_progress_bar=True)#, batch_size=16)
     with open(model_name + '_poetry_bert_embeddings.pkl', 'wb') as poebefile:
         pickle.dump(poetry_embeddings, poebefile, protocol=4)
 else:
-    print("Loading pre-calculated BERT embeddings for poetry")
+    print("Loading pre-calculated ", model_name, " embeddings for poetry")
     with open(model_name + '_poetry_bert_embeddings.pkl', 'rb') as poebefile:
         poetry_embeddings = pickle.load(poebefile)
 
 if not os.path.exists(model_name + '_plot_bert_embeddings.pkl'):    
-    print("Finding BERT embeddings for plots")
+    print("Finding ", model_name, " embeddings for plots")
     plots_embeddings = []
     all_plot_sentences = []
     all_plot_lengths = [0]
@@ -83,21 +84,21 @@ if not os.path.exists(model_name + '_plot_bert_embeddings.pkl'):
     with open(model_name + '_plot_bert_embeddings.pkl', 'wb') as plobefile:
         pickle.dump(plots_embeddings, plobefile, protocol=4)
 else:
-    print("Loading pre-calculated BERT embeddings for plots")
+    print("Loading pre-calculated ", model_name, " embeddings for plots")
     with open(model_name + '_plot_bert_embeddings.pkl', 'rb') as plobefile:
         plots_embeddings = pickle.load(plobefile)
     
 if not os.path.exists(model_name + '_poetry_annoy_bert.ann'):
-    t = AnnoyIndex(1024, metric='angular')   #fast nearest neight lookup for poem lines
+    t = AnnoyIndex(poetry_embeddings[0].shape[0], metric='angular')   #fast nearest neight lookup for poem lines
     print('Building annoy for fast nearest neighbor search...')
     for i in tqdm(range(len(poetry_embeddings))):
         t.add_item(i, poetry_embeddings[i])
     t.build(100)  # build 100 trees. More trees gives higher precision when querying
     t.save(model_name + '_poetry_annoy_bert.ann')
-    print('Saved Poetry annoy model based on BERT.')
+    print('Saved Poetry annoy model based on ', model_name)
 else:
-    print('Loading previously made annoy model')
-    t = AnnoyIndex(1024, metric='angular')
+    print('Loading previously made annoy model for ', model_name)
+    t = AnnoyIndex(poetry_embeddings[0].shape[0], metric='angular')
     t.load(model_name + '_poetry_annoy_bert.ann')
     
 assert(t.get_n_items() == len(all_lines))
@@ -184,7 +185,7 @@ def find_closest(src_vec, linevectuples):
 
 even = (len(plot_sentences) % 2 == 0)
 
-for i in range(1, len(plot_sentences) - 1, 2):
+for i in range(1, len(plot_sentences), 2):
     sentence1 = plot_sentences[i-1]
     sentence2 = plot_sentences[i]
     s1_vec = plot_embeddings[i-1]
