@@ -29,6 +29,16 @@ Both codes uses multiprocessing for speedup and you have mention the number of p
 You can download all the datasets, the compiled embeddings files, and the annoy object here: 
 https://drive.google.com/drive/folders/1FYxKooQ0dbOMZcJjkP2tfLfyhuo0bWuU?usp=sharing
 
+To find the closest lines in the poetry dataset for our own text, put the text in input.txt and run:
+
+> python text2poem_glove.py
+
+for matched lines using glove and
+
+> python text2poem_BERT.py <model_name>
+
+for matched liens using BERT.
+
 Examples of these matching are provided at the end.
 
 -------------------------------------------------
@@ -45,8 +55,6 @@ Then, start the training by running:
 
 You can download the trained weights here (weights will be added as the training completes):
 https://drive.google.com/drive/folders/16eIUa26n-Zmz1lWgZywY5pYmgeadodwY?usp=sharing
-
-The code has been modified to support multi-gpu training and Pytorch Dataloaders for faster data loading
 
 -------------------------------------------------
 
