@@ -49,7 +49,7 @@ I have tried translating poetic verses into german and back to remove the poetic
 
 > python sentencepiece_encode.py
 
-Change directory to OpenNMT-py and then, to translate the poetry dataset into german run:
+Download the repo from here: https://drive.google.com/file/d/1tiqPe7nEugvCOuxamkf9dqgfvVXk2Eus/view?usp=sharing . Change directory to OpenNMT-py and then, to translate the poetry dataset into german run:
 
 > python translate.py -model ./averaged-10-epoch.pt -src ./poetry_sp.txt -output ./german.txt -replace_unk -gpu 0
 
