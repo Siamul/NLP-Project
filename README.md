@@ -75,6 +75,19 @@ You will find the converted outputs in output.txt
 
 -----------------------------------------------
 
+# Retranslating into another language and back to remove poeticness.
+
+I have tried translating poetic verses into german and back to remove the poeticness and therefore, obtain an aligned dataset of poetic and non-poetic verses. I utilized the pretrained models (https://opennmt.net/Models-py/) from OpenNMT-py (https://github.com/OpenNMT/OpenNMT-py). The models utilized SentencePiece tokenized text. To convert the original poetry dataset in './poetry.txt' to a SentencePiece tokenized dataset saved to './poetry_sp.txt', run:
+
+> python sentencepiece_encode.py
+
+Change directory to OpenNMT-py and then, to translate the poetry dataset into german run:
+
+> python translate.py -model ./averaged-10-epoch.pt -src ./poetry_sp.txt -output ./german.txt -replace_unk -gpu 0
+
+To translate the poetry dataset back into english run:
+
+> python translate.py -model ./iwslt-brnn2.s131_acc_62.71_ppl_7.74_e20.pt -src ./german1.txt -output ./text1.txt -replace_unk -gpu 0
 
 ### We have the pairwise sentences from a part of the Shrek plot and the Gutenberg Poetry corpus found by closest distance between the keywords of each sentence using GloVe (https://nlp.stanford.edu/projects/glove/) vectors trained with Common Crawl (840B tokens, 2.2M vocab, cased, 300d vectors) and sentence embeddings from BERT transformers (https://arxiv.org/abs/1908.10084). 
 
