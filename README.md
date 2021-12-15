@@ -57,6 +57,10 @@ To translate the poetry dataset back into english run:
 
 > python translate.py -model ./iwslt-brnn2.s131_acc_62.71_ppl_7.74_e20.pt -src ./german1.txt -output ./text1.txt -replace_unk -gpu 0
 
+You utilize Google Translate using deep_translator api, run:
+
+> python retranslator.py
+
 -------------------------------------------------
 
 # Attention-based Seq2seq model from (https://github.com/jadore801120/attention-is-all-you-need-pytorch) 
