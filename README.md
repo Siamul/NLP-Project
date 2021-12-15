@@ -73,7 +73,7 @@ Then, start the training by running:
 
 > python train.py -data_pkl <data_file_name> -embs_share_weight -proj_share_weight -label_smoothing -output_dir output -b <batch_size> -warmup 128000 -epoch 400 -save_mode <best/all>
 
-You can download the trained weights here (weights will be added as the training completes):
+You can download the trained weights here:
 https://drive.google.com/drive/folders/16eIUa26n-Zmz1lWgZywY5pYmgeadodwY?usp=sharing
 
 -------------------------------------------------
